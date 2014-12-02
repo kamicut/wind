@@ -7,3 +7,6 @@ PRs welcome, clone the repo and run [beefy](http://didact.us/beefy/)
 ```sh
 beefy index.js
 ```
+
+## License 
+MIT
