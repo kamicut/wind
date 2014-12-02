@@ -1,5 +1,5 @@
 var d3 = require('d3');
-var buildGrid = require('./vectors.js')
+var buildGrid = require('./lib/vectors.js')
 
 d3.json('data/json/wind-surface-20140919.json', function(file) {
     var windData = {
