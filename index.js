@@ -15,7 +15,15 @@ d3.json('data/json/wind-surface-20140919.json', function(file) {
     //Grid where we can interpolate
     var grid = buildGrid(windData);
     window.grid = grid;
-    // grid.forEachPoint(function(a,b,c) {
-    //     document.body.insertAdjacentHTML('beforeend', a + ',' + b + ',' + c[0] + ',' + c[1] + ',' + Math.sqrt(c[0] * c[0] + c[1] * c[1]) + '<br />')
-    // })
+    
+    //Write interpolated vector field to document body
+    kingsfireCoords = [-121.5, 37.8, -118.7, 40];
+
+    document.body.insertAdjacentHTML('beforeend', 'lon,lat,u,v,mag<br/ >')
+    for (var i=kingsfireCoords[0]; i<=kingsfireCoords[2];i+=0.1) { 
+        for (var j=kingsfireCoords[1]; j<=kingsfireCoords[3]; j+= 0.1) {
+            var vector = grid.interpolate(i,j);
+            document.body.insertAdjacentHTML('beforeend',i +','+j+','+vector[0]+','+vector[1]+','+vector[2]+'<br />') 
+        }
+    }
 })  
