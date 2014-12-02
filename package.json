@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kamicut/wind/issues"
   },
-  "homepage": "https://github.com/kamicut/wind"
+  "homepage": "https://github.com/kamicut/wind",
+  "devDependencies": {
+    "beefy": "^2.1.1"
+  }
 }
